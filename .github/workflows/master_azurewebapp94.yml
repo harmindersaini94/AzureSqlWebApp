@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Azure Login
-        uses: Azure/login@v1
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1'
           include-prerelease: true
@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'AzureWebApp94'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5F0E51B2052A4DB8903C1F13E54DE1BE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5B62CF72192F49079F973EA4804C2629 }}
           package: .
